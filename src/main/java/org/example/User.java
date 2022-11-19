@@ -4,7 +4,7 @@ import org.mindrot.jbcrypt.BCrypt;
 
 public class User {
 
-    private  int id;
+    private int id;
     private String userName;
     private String email;
     private String password;
@@ -44,9 +44,12 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
 }
+
+
