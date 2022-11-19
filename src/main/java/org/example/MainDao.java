@@ -20,7 +20,7 @@ public class MainDao {
         UserDao userDao = new UserDao();
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Co chcesz zrobić?? a - dodaj rekord  r- kasuj rekord p- drukuj wszystkie rekordy u-aktualizuj wszystkie rekork");
+            System.out.println("Co chcesz zrobić?? a - dodaj rekord  r- kasuj rekord p- drukuj wszystkie rekordy u-aktualizuj wszystkie rekordy");
             String command = scanner.nextLine();
             if ("p".equals(command)) {
                 User[] users = userDao.findAll();
