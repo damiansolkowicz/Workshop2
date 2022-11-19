@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9aa0a79-2050-4fc1-8b90-cafbb074c3db" name="Changes" comment="correction">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainDao.java" afterDir="false" />
-    </list>
+    <list default="true" id="c9aa0a79-2050-4fc1-8b90-cafbb074c3db" name="Changes" comment="correction" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668845045827</updated>
-      <workItem from="1668845048803" duration="19826000" />
+      <workItem from="1668845048803" duration="20481000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1668845100534</created>
@@ -160,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668863918341</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="correction">
+      <created>1668864899185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668864899185</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
