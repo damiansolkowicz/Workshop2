@@ -10,6 +10,7 @@ public class UserDao {
     private static final String DELETE_QUERY = "DELETE FROM wrokshop2.users where id = ?";
     private static final String READ_QUERY="SELECT * FROM  users where id=?";
     public static final String UPDATE_USER_QUERY= "UPDATE workshop2.users SET username = ?, email = ?, password = ? WHERE id = ?;";
+    public static final String READ_ALL_QUERY="select  * from workshop2.users;";
 
     public String hashPassword(String password) {
 
@@ -81,6 +82,27 @@ public class UserDao {
                 e.printStackTrace();
             }
 
+    }
+    public User[] findAll(){
+
+        User[] users = new User[0];
+        try (Connection conn = DbUtil.getConnection();) {
+            PreparedStatement statement = conn.prepareStatement(READ_ALL_QUERY);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                User user = new User();
+                user.setId(resultSet.getInt("id"));
+                user.setUserName(resultSet.getString("userName"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPassword(resultSet.getString("password"));
+                users = addToArray(user, users);
+            }
+                return users;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
     private User[] addToArray(User u, User[] users) {
         User[] tmpUsers = Arrays.copyOf(users, users.length + 1);
