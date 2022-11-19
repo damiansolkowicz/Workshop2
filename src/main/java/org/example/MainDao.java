@@ -16,11 +16,11 @@ public class MainDao {
       userDao.create(user1);
 */
 
-        User user=new User();
+        User user = new User();
         UserDao userDao = new UserDao();
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Co chcesz zrobić?? a - dodaj rekord  r- kasuj rekord p- drukuj wszystkie rekordy u-aktualizuj wszystkie rekordy");
+            System.out.println("Co chcesz zrobić?? a - dodaj rekord  r- kasuj rekord s- wyświetla pojedynczy rekord, p- drukuj wszystkie rekordy u-aktualizuj wszystkie rekordy");
             String command = scanner.nextLine();
             if ("p".equals(command)) {
                 User[] users = userDao.findAll();
@@ -30,7 +30,7 @@ public class MainDao {
                     }
                 }
             }
-            if("a".equals(command)){
+            if ("a".equals(command)) {
                 System.out.println("Podaj nazwe użytkownika");
                 user.setUserName(scanner.nextLine());
                 System.out.println("podaj Mail");
@@ -39,12 +39,12 @@ public class MainDao {
                 user.setPassword(scanner.nextLine());
                 userDao.create(user);
             }
-            if("r".equals(command)){
+            if ("r".equals(command)) {
                 System.out.println("Podaj index");
-                int id=scanner.nextInt();
+                int id = scanner.nextInt();
                 userDao.delete(id);
             }
-            if("u".equals(command)){
+            if ("u".equals(command)) {
                 System.out.println("Podaj id użytkownika ");
                 user.setId(Integer.parseInt(scanner.nextLine()));
                 System.out.println("Podaj nową nazwe użytkownika");
@@ -56,10 +56,14 @@ public class MainDao {
                 userDao.update(user);
 
             }
+            if ("s".equals(command)) {
+                System.out.println("Który rekord wyświetlić");
+                int id= scanner.nextInt();
+                System.out.println(userDao.read(id));
+            }
         }
     }
-    }
-
+}
 
 
 
