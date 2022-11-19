@@ -46,6 +46,7 @@ public class MainDao {
             }
             if("u".equals(command)){
                 System.out.println("Podaj id użytkownika ");
+                user.setId(Integer.parseInt(scanner.nextLine()));
                 System.out.println("Podaj nową nazwe użytkownika");
                 user.setUserName(scanner.nextLine());
                 System.out.println("podaj nowy Mail");
