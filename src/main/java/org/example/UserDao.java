@@ -86,8 +86,7 @@ public class UserDao {
     public User[] findAll(){
 
         User[] users = new User[0];
-        try (Connection conn = DbUtil.getConnection();) {
-            PreparedStatement statement = conn.prepareStatement(READ_ALL_QUERY);
+        try (Connection conn = DbUtil.getConnection();PreparedStatement statement = conn.prepareStatement(READ_ALL_QUERY)) {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 User user = new User();
